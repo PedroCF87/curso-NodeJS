@@ -1,0 +1,25 @@
+@layout('main')
+@section('content')
+
+  <h1 class="mb-3">Nova Tarefa</h1>
+
+  <form action="{{ route('/add-tarefa') }}" method="post">
+    {{ csrfField() }}
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" class="form-control {{ hasErrorFor('title') && 'is-invalid' }}" name="title" aria-describedby="titleHelp">
+      {{ elIf('<small id="titleHelp" class="form-text invalid-feedback">$self</small>', getErrorFor('title'), hasErrorFor('title') ) }}
+
+    </div>
+
+    <div class="form-group">
+      <label for="bodyHelp">Descrição</label>
+      <textarea type="text" class="form-control {{ hasErrorFor('body') && 'is-invalid' }}" name="body" aria-describedby="bodyHelp"></textarea>
+      {{ elIf('<small id="bodyHelp" class="form-text invalid-feedback">$self</small>', getErrorFor('body'), hasErrorFor('body') ) }}
+    </div>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-check"></i> Salvar
+    </button>
+  </form>
+
+@endsection

@@ -1,0 +1,16 @@
+@layout('main')
+@section('content')
+
+  <h1>{{title}}</h1>
+  @if(old('notificacao'))
+  <div class="alert alert-primary" role="alert">
+    <i class="fas fa-check text-success"></i> {{ old('notificacao') }}
+  </div>
+  @endif
+
+  <ul class="list-group">
+    @each(item in tasks)
+      <li class="list-group-item" title="{{ item.body }}">{{ item.title }}</li>
+    @endeach
+  </ul>
+@endsection

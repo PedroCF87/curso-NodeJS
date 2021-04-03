@@ -1,0 +1,55 @@
+  @layout('main')
+  @section('content')
+  <style>
+    img { max-width:  100%; }
+    .imgAvatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin-right: 20px;
+    }
+  </style>
+    <div class="row">
+      <div class="col">
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+                <img src="https://img-a.udemycdn.com/course/240x135/2447098_c74c.jpg?oFEWqheixHt1FYKEqgrKFa3NL8T43WSwJH20Lvq4vMow-GpuAIjCDyMxukgXJc0blQxdOmLa6f40ezcZWUNOq7NKSRoJ9M8g_Q-jOkRnkllrN8a7uZ-vzhhfCI3oJQ" alt="Imagem do curso">
+              </div>
+              <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+                <h1>Curso de AdonisJS (Udemy)</h1>
+                <p>
+                  <strong>Acesse o curso:</strong> <br class="d-block d-md-none">
+                  <a href="https://www.udemy.com/course/aprenda-a-programar-node-com-adonisjs-bonus-api/">Aprenda a programar Node com AdonisJs</a>
+                </p>
+                <p>
+                  <small>INSTRUTOR:</small> <strong>Leandro Freitas</strong>.
+                </p>
+                <p>
+                  <img src="https://avatars3.githubusercontent.com/u/41650210?s=460&u=469d099b5d8fcd14df4bac0f72102f4453e486ed&v=4" alt="Avatar Pedro" class="imgAvatar">
+                  <small>ALUNO:</small> <strong>Pedro Figueira</strong>.
+                </p>
+              </div>
+            </div>
+            <hr>
+            <h3>Rotas Criadas durante o curso</h3>
+            <div class="row">
+              <div class="col">
+                <a class="mt-2 mr-2 btn btn-primary" href="#">Home (página atual)</a>
+                <a class="mt-2 mr-2 btn btn-primary" href="http://127.0.0.1:3333/teste">Rota Teste</a>
+                <a class="mt-2 mr-2 btn btn-primary" href="http://127.0.0.1:3333/teste/999">Rota Teste/ID</a>
+                <a class="mt-2 mr-2 btn btn-primary" href="http://127.0.0.1:3333/task">Rota Task</a>
+                <a class="mt-2 mr-2 btn btn-primary" href="http://127.0.0.1:3333/tarefas">Lista de Tarefas</a>
+                <a class="mt-2 mr-2 btn btn-primary" href="http://127.0.0.1:3333/add-tarefa">Adicionar Tarefa</a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  @endsection
